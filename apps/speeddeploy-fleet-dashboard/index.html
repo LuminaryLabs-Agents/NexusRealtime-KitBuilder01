@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SpeedDeploy Fleet Dashboard</title>
+  <link rel="stylesheet" href="./src/styles.css" />
+</head>
+<body>
+  <main id="app">
+    <section class="hero">
+      <h1>SpeedDeploy</h1>
+      <p>A JavaScript fleet software management dashboard composed from deterministic Domain Service Kits.</p>
+      <div class="actions">
+        <button id="createDeployment">Create deployment</button>
+        <button id="startRollout" class="secondary">Start rollout</button>
+        <button id="simulateStep" class="secondary">Simulate device results</button>
+        <button id="advanceWave" class="secondary">Advance wave</button>
+        <button id="rollback" class="danger">Rollback failed devices</button>
+      </div>
+    </section>
+    <section class="panel"><h2>Fleet summary</h2><div id="summary"></div></section>
+    <section class="panel" id="rollout"></section>
+    <section class="panel" style="grid-column: 1 / -1;"><h2>Device grid</h2><table id="devices"><thead><tr><th>Host</th><th>Site</th><th>Ring</th><th>OS</th><th>Health</th><th>Score</th><th>Ready</th></tr></thead><tbody></tbody></table></section>
+    <section class="panel"><h2>Audit ledger</h2><ol id="audit"></ol></section>
+    <section class="panel"><h2>Debug snapshot</h2><pre id="debug"></pre></section>
+  </main>
+  <section id="errorPanel" role="alert" hidden></section>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
