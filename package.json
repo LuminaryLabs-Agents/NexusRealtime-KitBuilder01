@@ -5,6 +5,8 @@
   "private": true,
   "description": "SpeedDeploy Domain Service Kit ProtoKits and browser dashboard experiment.",
   "scripts": {
-    "test": "node --test tests/*.test.mjs"
+    "test": "node --test tests/*.test.mjs",
+    "serve": "node scripts/serve-speeddeploy.mjs",
+    "serve:speeddeploy": "node scripts/serve-speeddeploy.mjs"
   }
 }
